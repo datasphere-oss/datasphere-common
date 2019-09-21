@@ -10,9 +10,23 @@
  * See the Mulan PSL v1 for more details.
  */
 
-package com.datasphere.engine.common.exception;
+package com.datasphere.server.common.exception;
 
-@FunctionalInterface
-public interface FunctionWithException<T, R, E extends Exception> {
-  R apply (T t) throws E;
+import com.datasphere.server.common.exception.JRuntimeException;
+
+public class JIllegalOperationException extends JRuntimeException {
+	
+	private static final long serialVersionUID = 1L;
+
+	public JIllegalOperationException() {
+		super();
+	}
+
+	public JIllegalOperationException(Integer errorCode, String message) {
+		super(errorCode, message);
+	}
+
+	public JIllegalOperationException(String message) {
+		super(message);
+	}
 }

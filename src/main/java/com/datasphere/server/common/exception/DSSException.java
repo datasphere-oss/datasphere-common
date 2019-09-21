@@ -10,7 +10,7 @@
  * See the Mulan PSL v1 for more details.
  */
 
-package com.datasphere.engine.common.exception;
+package com.datasphere.server.common.exception;
 
 import com.google.common.base.Preconditions;
 

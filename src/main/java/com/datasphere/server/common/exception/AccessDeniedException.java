@@ -10,27 +10,27 @@
  * See the Mulan PSL v1 for more details.
  */
 
-package com.datasphere.engine.common.exception;
-
+package com.datasphere.server.common.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-import com.datasphere.engine.common.exception.GlobalErrorCodes;
-import com.datasphere.engine.common.exception.MetatronException;
+import com.datasphere.server.common.exception.GlobalErrorCodes;
+import com.datasphere.server.common.exception.DSSException;
 
-@ResponseStatus(value = HttpStatus.BAD_REQUEST, reason = "Bad Request")
-public class BadRequestException extends MetatronException {
 
-  public BadRequestException(String message) {
-    super(GlobalErrorCodes.BAD_REQUEST_CODE, message);
+@ResponseStatus(value = HttpStatus.FORBIDDEN, reason = "Access denied")
+public class AccessDeniedException extends DSSException {
+
+  public AccessDeniedException(String message) {
+    super(GlobalErrorCodes.ACCESS_DENIED_CODE, message);
   }
 
-  public BadRequestException(Throwable cause) {
-    super(GlobalErrorCodes.BAD_REQUEST_CODE, cause);
+  public AccessDeniedException(Throwable cause) {
+    super(GlobalErrorCodes.ACCESS_DENIED_CODE, cause);
   }
 
-  public BadRequestException(String message, Throwable cause) {
-    super(GlobalErrorCodes.BAD_REQUEST_CODE, message, cause);
+  public AccessDeniedException(String message, Throwable cause) {
+    super(GlobalErrorCodes.ACCESS_DENIED_CODE, message, cause);
   }
 }
