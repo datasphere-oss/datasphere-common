@@ -1194,6 +1194,13 @@
 			<artifactId>mongo-java-driver</artifactId>
 			<version>3.11.0</version>
 		</dependency>
+		<!--zhdadd-->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>4.3.13.RELEASE</version>
+		</dependency>
+
 
 	</dependencies>
 
