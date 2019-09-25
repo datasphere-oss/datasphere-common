@@ -34,7 +34,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.http.converter.HttpMessageNotWritableException;
-import org.springframework.web.HttpServletRequestMethodNotSupportedException;
+//import org.springframework.web.HttpServletRequestMethodNotSupportedException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
@@ -135,7 +135,7 @@ public class RestExceptionHandler extends AbstractExceptionHandler {
    *
    * @param o_O the exception to handle.
    */
-  @ExceptionHandler
+  /*@ExceptionHandler
   ResponseEntity<Void> handle(HttpServletRequestMethodNotSupportedException o_O, WebRequest webRequest) {
 
     HttpHeaders headers = new HttpHeaders();
@@ -143,7 +143,7 @@ public class RestExceptionHandler extends AbstractExceptionHandler {
 
     return response(HttpStatus.METHOD_NOT_ALLOWED, headers, webRequest);
   }
-
+*/
   /**
    * Handles {@link ETagDoesntMatchException} by returning {@code 412 Precondition Failed}.
    *
